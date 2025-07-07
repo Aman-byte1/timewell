@@ -16,7 +16,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 # In Windows, build-name is used as the major, minor, and patch parts
 # of the product and file versions while build-number is used as the build suffix.
-version: 1.0.0+1
+version: 2.0.0+2
 
 environment:
   sdk: ^3.8.1
@@ -33,9 +33,11 @@ dependencies:
   flutter_riverpod: ^2.4.9
   shared_preferences: ^2.2.2
   intl: ^0.20.2
+  uuid: ^4.4.0
   syncfusion_flutter_charts: ^30.1.38
   table_calendar: ^3.0.9
   fl_chart: ^1.0.0
+  url_launcher: ^6.3.0
   timezone: ^0.10.1
   screenshot: ^3.0.0
   share_plus: ^11.0.0
@@ -51,10 +53,11 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_launcher_icons: ^0.14.4
-flutter_icons: # Add this section
-  android: true
+flutter_launcher_icons:
+  android: "launcher_icon" # Can be true, or a custom name
   ios: true
-  image_path: "assets/icons/icon.png"
+  image_path: "assets/icons/icon.png" # Your specified path
+  min_sdk_android: 21 # Set this to your minimum Android SDK version
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your

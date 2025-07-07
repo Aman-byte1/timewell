@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:timewell/widgets/bottom_navigation.dart';
-import 'stopwatch_screen.dart';
+import 'challenges_screen.dart'; // Import the new ChallengesScreen
 import 'timeline_screen.dart';
 import 'calendar_screen.dart';
 import 'settings_screen.dart';
@@ -18,7 +18,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   int _currentIndex = 0;
   
   final List<Widget> _screens = const [
-    StopwatchScreen(),
+    ChallengesScreen(), // Replaced StopwatchScreen with ChallengesScreen
     TimelineScreen(),
     CalendarScreen(),
     SettingsScreen(),
@@ -41,7 +41,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         currentIndex: _currentIndex,
         onTap: (index) => setState(() => _currentIndex = index),
       ),
-      floatingActionButton: _currentIndex == 1
+      floatingActionButton: _currentIndex == 1 // This FAB is for TimelineScreen
           ? FloatingActionButton(
               onPressed: () => _showAddTimerDialog(context),
               child: const Icon(Icons.add),

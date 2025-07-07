@@ -17,8 +17,8 @@ class BottomNavigation extends StatelessWidget {
       onDestinationSelected: onTap,
       destinations: const [
         NavigationDestination(
-          icon: Icon(Icons.timer),
-          label: 'Stopwatch',
+          icon: Icon(Icons.work_outline),
+          label: 'Challenges',
         ),
         NavigationDestination(
           icon: Icon(Icons.list),
