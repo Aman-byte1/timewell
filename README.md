@@ -1,110 +1,154 @@
-TimeWell
-TimeWell is a comprehensive Flutter application designed to help users manage their time effectively, build healthy habits, track challenges, and stay organized with timers and a calendar.
+# ⏳ TimeWell
 
-Features
-Habit Statistics: Visualize your habit completion rates and daily trends with intuitive charts (powered by syncfusion_flutter_charts). Get daily motivational quotes to keep you going.
+**TimeWell** is a comprehensive Flutter application designed to help users manage their time effectively, build healthy habits, track challenges, and stay organized with timers and a calendar.
 
-Challenges: Embark on structured challenges with daily projects.
+---
 
-Create custom challenges with a specified duration in days.
+## 🚀 Features
 
-Organize projects for each day of a challenge, including titles, descriptions, external links, and goals.
+### 📊 Habit Statistics
+- Visualize habit completion trends using beautiful charts.
+- Powered by `syncfusion_flutter_charts`.
+- Get daily motivational quotes to keep you going.
 
-Mark projects as complete and track overall challenge progress.
+### 🏆 Challenges
+- Start structured challenges with daily projects.
+- Create custom challenges by specifying a duration.
+- Organize each day's projects with titles, descriptions, external links, and goals.
+- Mark tasks as complete and monitor overall challenge progress.
+- Data is stored persistently using `shared_preferences`.
 
-Persistently save challenge data using shared_preferences.
+### ⏱️ Timers
+- Countdown timers with custom titles, notes, target dates, and repeat options.
+- Built with `TimerNotifier` and `TimerModel`.
 
-Timers: (Based on the TimerNotifier and TimerModel provided in conversation history) Manage various countdown timers with custom titles, notes, target dates, and repeat types.
+### 📅 Calendar View
+- View upcoming challenges, events, and timers visually using a calendar (via `CalendarScreen`).
 
-Calendar View: (Implied by CalendarScreen) Provides a visual overview of your schedule and progress.
+### ⚙️ Settings
+- Customize preferences, including light/dark theme toggle.
 
-Settings: (Implied by SettingsScreen) Customize app preferences, including theme (light/dark mode).
+---
 
-Data Persistence: All user data (habits, challenges, timers) is saved locally using shared_preferences.
+## 🧠 Tech Stack
 
-Technologies Used
-Flutter: The UI toolkit for building natively compiled applications for mobile, web, and desktop from a single codebase.
+| Technology                  | Use Case                                |
+|----------------------------|------------------------------------------|
+| **Flutter**                | UI development                          |
+| **Riverpod**               | State management                        |
+| **shared_preferences**     | Local data persistence                  |
+| **url_launcher**           | Opening project external links          |
+| **uuid**                   | Generating unique IDs                   |
+| **intl**                   | Date/time formatting                    |
+| **syncfusion_flutter_charts** | Charting and visual analytics       |
 
-Riverpod: A robust and scalable state management solution for Flutter applications.
+---
 
-shared_preferences: For local data persistence.
+## 🛠️ Setup & Installation
 
-url_launcher: To open external links (e.g., project links in challenges).
+### ✅ Prerequisites
+- Flutter SDK 3.x or higher
+- Dart SDK (included with Flutter)
+- Android Studio or Visual Studio Code
 
-uuid: For generating unique IDs for challenges and projects.
+### 📥 Installation Steps
 
-intl: For internationalization and date/time formatting.
-
-syncfusion_flutter_charts: For rendering interactive charts in the Habit Statistics section.
-
-Setup and Installation
-To get a local copy up and running, follow these simple steps.
-
-Prerequisites
-Flutter SDK installed (version 3.x.x or higher recommended)
-
-Dart SDK (comes with Flutter)
-
-Installation
 Clone the repository:
 
-git clone <your-repository-url>
+```bash
+git clone https://github.com/Aman-byte1/time_well.git
 cd time_well
+````
 
 Install dependencies:
 
+```bash
 flutter pub get
+```
 
-Generate Launcher Icons (Optional but Recommended):
-If you've configured flutter_launcher_icons in your pubspec.yaml (as discussed previously), run:
+Run the app:
 
-flutter pub run flutter_launcher_icons:main
-
-Run the application:
-
+```bash
 flutter run
+```
 
-Usage
-Navigation: Use the bottom navigation bar to switch between Challenges, Timers (Timeline), Calendar, and Settings screens.
+Build the release APK:
 
-Challenges:
+```bash
+flutter build apk --release --no-tree-shake-icons
+```
 
-On the "My Challenges" screen, tap the floating action button to create a new challenge.
+---
 
-Enter a title, duration in days, and a start date.
+## 💡 Usage Guide
 
-Tap on an existing challenge to view its daily breakdown.
+### 🔁 Navigation
 
-On a daily challenge page, tap the + icon next to a day to add a new project.
+Use the bottom navigation bar to access:
 
-Fill in project details (title, description, link, goal).
+* **Challenges**
+* **Timeline (Timers)**
+* **Calendar**
+* **Settings**
 
-Mark projects as complete using the checkbox.
+### 🧗 Challenges
 
-Tap on a project to expand its details.
+1. Tap ➕ to create a challenge.
+2. Enter title, duration (in days), and start date.
+3. Tap on any day to add daily projects.
+4. Provide project title, description, goals, and external links.
+5. Mark completed tasks and track progress.
 
-Habit Statistics: Access this screen (e.g., from a dedicated tab or button, depending on your HomeScreen setup) to see visual summaries of your habits.
+### 📈 Habit Stats
 
-Timers: The "Timeline" tab will likely display your countdown timers. Use the floating action button to add new timers.
+* Access from home or statistics tab.
+* View pie or line charts of habit tracking.
+* See your streaks and completions visually.
 
-Settings: Adjust app themes and other preferences.
+### 🕒 Timers
 
-Contributing
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
+* View and manage countdowns under Timeline.
+* Add new timers with custom name, notes, deadlines, and repetition.
 
-Fork the Project
+### ⚙️ Settings
 
-Create your Feature Branch (git checkout -b feature/AmazingFeature)
+* Customize the theme.
+* Future: add notifications and reminder preferences.
 
-Commit your Changes (git commit -m 'Add some AmazingFeature')
+---
 
-Push to the Branch (git push origin feature/AmazingFeature)
+## 🤝 Contributing
 
-Open a Pull Request
+Contributions are what make the open-source community amazing!
 
-License
-Distributed under the MIT License. See LICENSE for more information.
+1. Fork the repo
+2. Create your Feature Branch:
+   `git checkout -b feature/AmazingFeature`
+3. Commit your changes:
+   `git commit -m 'Add some AmazingFeature'`
+4. Push to the branch:
+   `git push origin feature/AmazingFeature`
+5. Open a Pull Request
 
-Contact
-Your Name/Project Maintainer - your_email@example.com
-Project Link: https://github.com/your_username/time_well (Replace with your actual GitHub link)
+---
+
+## 📄 License
+
+Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
+
+---
+
+## 📬 Contact
+
+**Amanuel Gizachew**
+[GitHub](https://github.com/Aman-byte1)
+Project Repo: [https://github.com/AmanuelGizachew/time\_well]([https://github.com/Aman-byte1/timewell])
+
+---
+
+> TimeWell helps you own your time and build your future — one challenge, habit, and minute at a time.
+
+```
+
+Let me know if you want help generating screenshots, badges, or auto-deployment instructions for GitHub Pages or Play Store later!
+```
